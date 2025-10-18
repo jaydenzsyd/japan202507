@@ -1,0 +1,82 @@
+<html>
+<head>
+<title>MonkeyJJs Japan Trip!</title>
+</head>
+{% include "style.html" %}
+<style>
+h2 {
+  border: 2px solid black;
+  padding: 20px;
+  margin: 20px;
+}
+.feedback-form {
+    background-color: #fdfdfd;
+    border: 2px solid #ccc;
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 600px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form label {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.feedback-form fname{
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 1em;
+}
+.feedback-form input {
+    padding: 12px 24px;
+    border: none solid #000000;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.feedback-form button {
+    background-color: #007BFF;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.feedback-form button:hover {
+    background-color: #0056b3;
+}
+  </style>
+
+
+<body>
+<div class="header">
+  <h1 style="background-color:{{ colorhead }};color:#000000;">Feedback Page</h1>
+</div>
+
+{% include "navbar.html" %}
+<h2>Please write some feedback and for more information contact us</h2>
+  <form class="feedback-form" method="POST" action="/feedback">
+    <label for="fname">Feedback:</label><br>
+    <input type="text" id="fname" name="fname" value=""><br><br>
+  <label for="name">Input Your Name:</label>
+  <input type="text" id="name" name="name" required><br><br>
+
+  <button type="submit">Submit</button>
+</form>
+{% if message %}
+  <h2 style="color: rgb(0, 0, 0);">{{ message }}</h2>
+{% endif %}
+</body>
+</html>

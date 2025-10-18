@@ -1,0 +1,167 @@
+<html>
+<head>
+<title>MonkeyJJs Japan Trip!</title>
+</head>
+{% include "style.html" %}
+<style>
+a:link, a:visited {
+  background-color: ;
+  color: white;
+  padding: 14px 25px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+    body {
+      background-color: #f5f5f5;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 250px;
+      justify-content: center;
+      padding: 40px;
+    }
+
+    .gallery {
+      background-color: #ffffff;
+      width: 300px;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .desc {
+      background-color: white;
+      padding: 15px;
+      font-weight: bold;
+      font-size: 18px;
+      text-align: center;
+      flex-grow: 1;
+    }
+    .gallery a {
+  display: block;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
+}
+
+.gallery a img {
+  border: none !important;
+  box-shadow: none !important;
+}
+.gallery img {
+  width: 80%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 31.5%;
+  padding: 5px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+  .column {
+    width: 90%;
+  }
+}
+</style>
+<body>
+<div class="header">
+  <h1 style="background-color:{{ colorhead }};color:#000000;">Disney and Universal Theme Park</h1>
+</div>
+
+{% include "navbar.html" %}
+<h2>Welcome to the world of famous theme parks like Disneyland, Disneysea and Universal Studios.</h2>
+<p style = font-family:Verdana;font-size:18;>Disneyland Tokyo, located in Urayasu, Japan, is the first Disney park built outside of the United States, opening in 1983. It features iconic attractions like Space Mountain, It's a Small World, 
+and a traditional castle-themed area, blending classic Disney magic with Japanese culture. Adjacent to it is Tokyo DisneySea, a unique park that focuses on water-based themes and exploration, with
+immersive lands like Mediterranean Harbor and Mysterious Island. On the other hand, Universal Studios Japan, situated in Osaka, offers thrilling attractions based on popular movie franchises, such 
+as Harry Potter, Jurassic Park, and Minions, along with innovative rides like the Flying Dinosaur and Hollywood Dream. Both Disney parks and Universal Studios are major draws for tourists, with each 
+offering a distinct and immersive experience rooted in fantasy and adventure. Learn more from the below.</p>
+<div class="gallery-container">
+  <div class="gallery">
+    <a target="_blank" href="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/05/f9/9d/tokyo-disneysea.jpg?w=1200&h=-1&s=1">
+      <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/16/05/f9/9d/tokyo-disneysea.jpg?w=1200&h=-1&s=1" alt="Tokyo Disneysea" width="330" height="220">
+    </a>
+    <div class="desc">Tokyo Disneysea</div>
+    <p>Tokyo DisneySea offers a unique blend of adventure and fantasy, with stunning themed areas like Mediterranean Harbor and Mysterious Island, making it a magical experience for all ages.</p>
+  </div>
+
+  <div class="gallery">
+    <a target="_blank" href="https://www.travelcaffeine.com/wp-content/uploads/2022/09/night-super-nintendo-world-mario-land-universal-studios-bricker-1245.jpg">
+      <img src="https://www.travelcaffeine.com/wp-content/uploads/2022/09/night-super-nintendo-world-mario-land-universal-studios-bricker-1245.jpg" alt="Super Mario World" width="330" height="220">
+    </a>
+    <div class="desc">Universal Studios</div>
+    <p>Universal Studios Japan in Osaka is home to the playful Minion Park and the exciting Super Nintendo World, where visitors can meet Minions, explore Mario’s world, and enjoy fun, immersive rides.</p>
+  </div>
+
+
+  <div class="gallery">
+    <a target="_blank" href="https://www.neverendingvoyage.com/wp-content/uploads/2019/11/tokyo-disneyland-rides-13.jpg">
+      <img src="https://www.neverendingvoyage.com/wp-content/uploads/2019/11/tokyo-disneyland-rides-13.jpg" alt="Disneyland" width="330" height="220">
+    </a>
+    <div class="desc">Tokyo Disneyland</div>
+    <p>Tokyo Disneyland brings classic Disney magic to life with iconic attractions, parades, characters, and themed lands like Fantasyland and Tomorrowland for a fun-filled, unforgettable day.</p>
+  </div>
+  <div class="row">
+  <div class="column">
+    <h2>Tokyo DisneySea</h2>
+    <p>Tokyo DisneySea offers a one-of-a-kind theme park experience with breathtaking scenery, immersive storytelling, and adventurous rides. From exploring the volcanic Mysterious Island to cruising through 
+the romantic canals of Mediterranean Harbor, every area feels like stepping into a different world. Highlights include the thrilling Journey to the Center of the Earth, the aquatic adventure of 20,000 League
+s Under the Sea, and the spectacular Fantasmic! night show. Unique to Japan, DisneySea blends fantasy and exploration with beautifully themed ports inspired by real and imagined places. With world-class 
+entertainment, delicious themed food, and stunning attention to detail, it’s a truly unforgettable destination for all ages.<br><br></p>
+<img src="https://www.micechat.com/wp-content/uploads/2013/08/toyko-disneysea-mysterious-island-night.jpg" width="630" height="450"><br>
+<img src="https://www.disneytouristblog.com/wp-content/uploads/2015/12/eternal-sea-light-tokyo-disneysea-copy.jpg" width="630" height="450">
+  </div>
+  
+  <div class="column">
+    <h2>Universal Studios Osaka</h2>
+    <p>Universal Studios Japan in Osaka is a dynamic theme park that brings movies and characters to life with thrilling rides, immersive worlds, and exciting entertainment.
+ A standout attraction is Super Nintendo World, where visitors can step into Mario’s universe, punch question blocks, and race through the iconic Mario Kart ride. Nearby, Minion Park bursts with colour and chaos,
+   offering playful attractions and character encounters. The park also features popular zones like The Wizarding World of Harry Potter, Jurassic Park, and Hollywood-themed streets. With high-energy shows, themed
+     dining, and interactive experiences, Universal Studios Japan offers endless fun for both kids and adults.<br><br></p>
+     <img src="https://www.the-kansai-guide.com/kansaiguide/data/directory/12000/11491/20211015_061046_fad5d64b_w1920.jpg" width="630" height="450"><br>
+     <img src="https://media.timeout.com/images/105838677/750/422/image.jpg" width="630" height="450">
+  </div>
+  
+  <div class="column">
+    <h2>Tokyo Diseyland</h2>
+    <p>Tokyo Disneyland is a magical destination that brings classic Disney stories to life through enchanting lands, beloved characters, and unforgettable attractions. Guests 
+      can journey through Fantasyland, home to Cinderella’s Castle and timeless rides like Peter Pan’s Flight and It’s a Small World, or explore Tomorrowland with high-tech thrills like Space Mountain. The park is also
+      known for its dazzling parades, seasonal events, and joyful atmosphere. With themed dining, detailed scenery, and the chance to meet Mickey and friends, Tokyo Disneyland delivers a fun, heartwarming experience for
+   visitors of all ages.<br><br><br><br></p>
+   <img src="https://media2.tokyodisneyresort.jp/home/top/main/2025/01/mainL_01.jpg" width="630" height="450">
+   <img src="https://allears.net/wp-content/uploads/2023/04/2023-tokyo-disneyland-resort-disney-harmony-in-color-parade-big-hero-6-baymax.jpg" width="630" height="450">
+  </div>
+</div>
+
+</div>
+</body>
+</html>
